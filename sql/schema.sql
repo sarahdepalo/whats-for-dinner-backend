@@ -26,4 +26,3 @@ CREATE TABLE veggies (
     id serial PRIMARY KEY,
     veggie_name text
 );
-
