@@ -1,4 +1,5 @@
 -- ITALIAN
+
 INSERT INTO entrees 
     (entree_name, category, protein)
 VALUES 
@@ -44,6 +45,7 @@ VALUES
     ('Tuscan Chicken', 1, 2);
 
 -- MEXICAN
+
 INSERT INTO entrees 
     (entree_name, category, protein)
 VALUES 

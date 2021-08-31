@@ -10,7 +10,8 @@ class EntreeModel {
     static async getAll() {
         try {
             const response = await db.any(
-                `SELECT * FROM entrees;`);
+                `SELECT * FROM entrees;
+            `);
             return response;
 
         } catch(error) {
@@ -22,7 +23,8 @@ class EntreeModel {
     static async getByCategory(category) {
         try {
             const response = await db.any(
-                `SELECT * FROM entrees WHERE category = ${category};`);
+                `SELECT * FROM entrees WHERE category = ${category};
+            `);
             return response;
 
         } catch(error) {
@@ -60,6 +62,21 @@ class EntreeModel {
             return error;
         }
     };
+
+    static async getOneEntree(entree_id) {
+        try {
+            const response = await db.one(
+                `SELECT * FROM entrees
+                WHERE id = ${entree_id}
+            
+            ;`);
+            return response;
+
+        } catch(error) {
+            console.error('ERROR: ', error);
+            return error;
+        }
+    }
     
 }
 
