@@ -2,12 +2,14 @@
 const db = require('./conn');
 
 
-class EntreeModel {
+class DinnerModel {
     constructor(id) {
         this.id = id;
     }
 
-    static async getAll() {
+    // ENTREES
+
+    static async getAllEntrees() {
         try {
             const response = await db.any(
                 `SELECT * FROM entrees;
@@ -20,7 +22,7 @@ class EntreeModel {
         }
     };
 
-    static async getByCategory(category) {
+    static async getEntreesByCategory(category) {
         try {
             const response = await db.any(
                 `SELECT * FROM entrees WHERE category = ${category};
@@ -63,15 +65,40 @@ class EntreeModel {
         }
     };
 
-    static async getOneEntree(entree_id) {
+    // SIDES
+
+    static async getAllSides() {
         try {
-            const response = await db.one(
-                `SELECT * FROM entrees
-                WHERE id = ${entree_id}
-            
-            ;`);
+            const response = await db.any(`
+                SELECT * FROM sides;
+            `)
+            return response;
+        } catch(error) {
+            console.error('ERROR: ', error);
+            return error;
+        }
+    }
+
+
+    static async getSidesByCategory(category) {
+        try {
+            const response = await db.any(`
+                SELECT * from sides WHERE category = ${category}
+            `)
             return response;
 
+        } catch(error) {
+            console.error('ERROR: ', error);
+            return error;
+        }
+    }
+
+    static async getAllSides() {
+        try {
+            const response = await db.any(`
+                SELECT * from sides;
+            `);
+            return response;
         } catch(error) {
             console.error('ERROR: ', error);
             return error;
@@ -80,4 +107,4 @@ class EntreeModel {
     
 }
 
-module.exports = EntreeModel
+module.exports = DinnerModel
