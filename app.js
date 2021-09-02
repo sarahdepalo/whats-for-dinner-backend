@@ -2,7 +2,6 @@
 
 const http = require('http');
 const port = 3000; 
-const hostname = '127.0.0.1';
 
 const cors = require('cors');
 const morgan = require('morgan');
@@ -17,9 +16,7 @@ app.use(cors());
 
 const server = http.createServer(app);
 
-server.listen(port, hostname, () => {
-    console.log(`Server is running at: http://${hostname}:${port}`);
-});
+server.listen(port);
 
 const rootController = require('./routes/index');
 const dinnerController = require('./routes/dinner');
