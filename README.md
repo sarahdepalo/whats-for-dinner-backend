@@ -1,12 +1,12 @@
 <h1 align= "center">
-What's For Dinner?
+What's For Dinner API
 </h1>
 
 <p align="center">
   <a href="https://github.com/sarahdepalo/whats-for-dinner"><strong>Check Out The Frontend Code »</strong></a>
 </p>
 
-The *What's For Dinner* API is a small API built to serve data to the [What's For Dinner ](https://whats-4-dinner.netlify.app/)web app. Below are the routes used for getting data. 
+The *What's For Dinner* API is a small RESTful API built to serve data to the [What's For Dinner ](https://whats-4-dinner.netlify.app/)web app. Below are the routes used for getting data. 
 
 BASE URL - [https://whats-for-dinner2.herokuapp.com/](https://whats-for-dinner2.herokuapp.com/)
 
