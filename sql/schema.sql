@@ -21,8 +21,3 @@ CREATE TABLE sides (
     side_name text,
     category integer REFERENCES categories (id)
 );
-
-CREATE TABLE veggies (
-    id serial PRIMARY KEY,
-    veggie_name text
-);
