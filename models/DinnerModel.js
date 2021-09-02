@@ -107,4 +107,4 @@ class DinnerModel {
     
 }
 
-module.exports = DinnerModel
+module.exports = DinnerModel 
