@@ -8,7 +8,7 @@ What's For Dinner API
 
 The *What's For Dinner* API is a small RESTful API built to serve data to the [What's For Dinner ](https://whats-4-dinner.netlify.app/)web app. Below are the routes used for getting data. 
 
-BASE URL - [https://whats-for-dinner2.herokuapp.com/](https://whats-for-dinner2.herokuapp.com/)
+BASE URL - [https://whats-for-dinner-backend-production.up.railway.app/](https://whats-for-dinner-backend-production.up.railway.app/)
 
 
 ## Endpoints

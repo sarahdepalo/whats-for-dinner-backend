@@ -19,7 +19,7 @@ app.use(cors());
 const server = http.createServer(app);
 
 server.listen(port, host, () => {
-    console.log('Server has started')
+    console.log(`Server has started at ${host}:${port}`)
 });
 
 const rootController = require('./routes/index');
